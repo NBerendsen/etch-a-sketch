@@ -4,14 +4,19 @@ h1 {
 }
 
 #container {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   width: 960px;
 }
+
+.row {
+  display:flex;
+}
+
 .box {
   border: 2px solid gray;
   box-sizing: border-box;
   height: 240px;
-  width: 240px;
+  /*width: 240px;*/
   flex: 1 1 auto;
 }
