@@ -2,3 +2,16 @@ h1 {
   color: gold;
   background-color: black;
 }
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
+}
+.box {
+  border: 2px solid gray;
+  box-sizing: border-box;
+  height: 240px;
+  width: 240px;
+  flex: 1 1 auto;
+}
