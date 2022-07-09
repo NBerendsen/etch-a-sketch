@@ -14,7 +14,10 @@ h1 {
   margin: 5px;
   /* border: 1px dashed blue; */
   color: white;
-  /* min-height: 100vh; */
+  /* max-height: 80vh; */
+  max-width: 90vh;
+  /* max-height: 60vh; */
+  justify-content: flex-end;
 }
 
 button {
@@ -40,7 +43,7 @@ button {
 }
 
 #container {
-  flex: 10 0 0;
+  flex: 10 1 0;
   /* display: flex; */
   /* border: 2px solid orange; */
   /* max-width: 960px; */
