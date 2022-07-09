@@ -23,9 +23,21 @@ function getRainbowColor() {
 }
 
 function fade(e) {
-  e.target.style.transitionProperty = 'background-color';
-  e.target.style.transitionDuration = transitionDuration;
-  e.target.style.backgroundColor = '';
+  if (transitionDuration !== '0s') {
+    e.target.style.transitionProperty = 'background-color';
+    e.target.style.transitionDuration = transitionDuration;
+    e.target.style.backgroundColor = '';
+  }
+}
+
+function resetGridColors() {
+  const boxes = document.querySelectorAll('.box');
+
+  boxes.forEach(box => {
+    box.style.transitionProperty = 'background-color';
+    box.style.transitionDuration = '0s';
+    box.style.backgroundColor = '';
+  })
 }
 
 function modify(e) {
@@ -109,6 +121,8 @@ const minusButton = document.querySelector('#minus');
 minusButton.addEventListener('click', decreaseDimension);
 
 function selectNeon() {
+  resetGridColors();
+
   console.log('neon');
   const neonButton = document.querySelector('#neon');
   const pastelButton = document.querySelector('#pastel');
@@ -120,6 +134,8 @@ function selectNeon() {
 }
 
 function selectPastel() {
+  resetGridColors();
+
   const neonButton = document.querySelector('#neon');
   const pastelButton = document.querySelector('#pastel');
 
@@ -130,6 +146,8 @@ function selectPastel() {
 }
 
 function toggleFade() {
+  resetGridColors();
+
   const fadeButton = document.querySelector('#fade');
 
   if (transitionDuration == '0s') {
